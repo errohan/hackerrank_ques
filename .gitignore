@@ -1,0 +1,16 @@
+target
+.DS_Store
+.classpath
+.settings
+.project
+*.iml
+.idea
+logs
+bin/
+.settings/
+.vscode/
+*/dependency-reduced-pom.xml
+ums-user-web/src/main/webapp/pages/themesv2/node_modules
+../../../../../../.vscode
+*.rdb
+*.swp
