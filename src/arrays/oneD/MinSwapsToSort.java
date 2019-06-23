@@ -7,25 +7,25 @@ package arrays.oneD;
 public class MinSwapsToSort {
     private static int minimumSwaps(int[] arr) {
         int minSwaps = 0;
-        boolean a[]=new boolean[arr.length];
-        for(int i = 0;i<arr.length;i++){
+        boolean a[] = new boolean[arr.length];
+        for (int i = 0; i < arr.length; i++) {
             int cycleSize = 1;
-            if(!a[i] && arr[i]!=i+1){
-                int j = arr[i]-1;
-                while(j!=i){
+            if (!a[i] && arr[i] != i + 1) {
+                int j = arr[i] - 1;
+                while (j != i) {
                     cycleSize++;
-                    a[j]=true;
-                    j = arr[j]-1;
+                    a[j] = true;
+                    j = arr[j] - 1;
                 }
-                minSwaps+=cycleSize-1;
+                minSwaps += cycleSize - 1;
             }
-            a[i]=true;
+            a[i] = true;
         }
         return minSwaps;
     }
 
     public static void main(String[] args) {
-        int a[]={4, 3, 2, 1};
+        int a[] = {4, 3, 2, 1};
         System.out.println(minimumSwaps(a));
     }
 }
